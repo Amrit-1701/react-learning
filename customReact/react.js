@@ -10,6 +10,7 @@
 // }
 
 //alternative - better 
+function customRender(reactEl, container) {
 const domEl = document.createElement(reactEl.type);
 domEl.innerHTML = reactEl.children;
 for (const prop in reactEl.props) {
@@ -17,6 +18,7 @@ for (const prop in reactEl.props) {
     domEl.setAttribute(prop,reactEl.props[prop])
 }
 container.appendChild(domEl);
+}
 
 const reactEl = {
     type: 'a',
