@@ -3,12 +3,19 @@ import Chai from "./chai"
 //always uppercase the tagname first letter
 
 function App() {
+
+  //how to inject js
+ //  use {} to inject js in jsx, we can use any js expression inside {}. we can also use ternary operator inside {}. 
+
+const name = "Amrit"
+
   return (
     <>
     <Chai/>
-    <p>hello everyone</p>
+    <p>hello everyone My self {name}</p>
     </>
     
+    //{name} this is evaluated expression, so it will be replaced by the value of name variable.
   )
 }
 

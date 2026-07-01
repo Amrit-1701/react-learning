@@ -29,4 +29,4 @@ const reactEl = {
 
 
 const mainContainer = document.getElementById('root');
-customRender(reactEl, mainContainer)
+customRender(reactEl, mainContainer) //reactEl is pass in mainContainer, so it will be rendered in mainContainer
