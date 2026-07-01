@@ -14,8 +14,8 @@ function MyApp() {
 const anotherEl = (
   <a href="https://google.com" target="_blank" >Visit Google</a>
 )
-// gives error because anotherEl is not a valid react element, it is just an object. 
- //so we can use React.createElement to create a react element from the object.
+  // gives error because anotherEl is not a valid react element, it is just an object. 
+ // so we can use React.createElement to create a react element from the object.
 
 
 const reactEl = React.createElement('a',
@@ -31,7 +31,7 @@ createRoot(document.getElementById('root')).render(
   <App/>
   // <MyApp/>
   // MyApp()
-   anotherEl //object is passed to render 
+  //anotherEl //object is passed to render 
   //reactEl
 
 )
