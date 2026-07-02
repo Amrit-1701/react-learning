@@ -14,9 +14,15 @@ const addval=()=>{
   Counter += 1;
   setCounter(Counter)
   console.log(`Counter Val: ${Counter}`)
- 
  // document.querySelector('h2').textContent = `Counter val: ${Counter}`
 }
+
+const resetVal=()=>{
+  if(Counter>0)
+  setCounter(Counter-1)
+ // setCounter(0)
+}
+
 
   return (
     <>
@@ -26,7 +32,7 @@ const addval=()=>{
     <button id="add" onClick={addval}>Add value</button>
     
     <hr></hr>
-    <button id="reset">Reset value {Counter} </button>
+    <button id="reset" onClick={resetVal}>Reset value {Counter} </button>
     <br></br>
     <footer>
       footer {Counter}
