@@ -1,17 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
+import React,{ useState } from 'react' //useState is a hook which is used to manage the state of the component
 import './App.css'
+
+//react control the UI updation so to change the updated value in UI 
+// we need to use hooks instead of using querySelector or getElementById.... 
 
 function App() {
   
-  let Counter = 25
+  //let Counter = 25
+  let [Counter, setCounter] = useState(15) //always use let
 
 const addval=()=>{
-  console.log(`Value Added: ${Math.random()}`);
-  
-
+ 
+  Counter += 1;
+  setCounter(Counter)
+  console.log(`Counter Val: ${Counter}`)
+ 
+ // document.querySelector('h2').textContent = `Counter val: ${Counter}`
 }
 
   return (
@@ -20,9 +24,14 @@ const addval=()=>{
     <h2>Counter val: {Counter}</h2>
 
     <button id="add" onClick={addval}>Add value</button>
-    <br></br>
+    
     <hr></hr>
-    <button id="dec">Decrease value</button>
+    <button id="reset">Reset value {Counter} </button>
+    <br></br>
+    <footer>
+      footer {Counter}
+    </footer>
+
     </>
   )
 }
