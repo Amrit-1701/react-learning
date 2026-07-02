@@ -19,7 +19,8 @@ function App(props) {
 
   return (
     <>
-     <h1 className='bg-red-500 text-white p-4 rounded-xl'>Tailwind Test</h1>
+     <h1 className='bg-red-500 text-white p-4 rounded-xl'>
+      Tailwind Test</h1>
      <Card username="chai leo" btnTxt="Get Started"/> 
      {/* the value I write in this will show in props */}
     <Card username="chai lelo" btnTxt="Follow"/>
