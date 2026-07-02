@@ -8,15 +8,25 @@ import Card from './components/card'
 // which means that they cannot be modified by the child component.
 
 function App(props) {
-  console.log('props',props)
+   console.log('props',props)
+
+  let myObj={
+    username:'amrit',
+    age:19
+  }
+
+  let newArr=[1,2,3,4]
 
   return (
     <>
      <h1 className='bg-red-500 text-white p-4 rounded-xl'>Tailwind Test</h1>
-     <Card channel="John Doe" /> {/* the value I write in this will show in props */}
-    <Card />
+     <Card username="chai leo" btnTxt="Get Started"/> 
+     {/* the value I write in this will show in props */}
+    <Card username="chai lelo" btnTxt="Follow"/>
+    
     </>
   )
+  console.log('props',props)
 }
 
 export default App
