@@ -1,7 +1,7 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
+//custom hook
+
+import { useEffect, useState } from 'react'
+ 
 import './App.css'
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
 
   return (
     <>
-      
+      <h1 className='text-3xl bg-orange-500 text-center'>currency converter</h1>
     </>
   )
 }
