@@ -1,38 +1,32 @@
-import React, { useId } from 'react'
-
-//  useId is a React Hook that generates a unique and stable ID for a component.
-// It is mainly used to connect form elements, such as linking a <label> with an <input>.
+import React, {useId} from 'react'
 
 function InputBox({
     label,
     amount,
-    onAmtChange,
+    onAmountChange,
     onCurrencyChange,
-    currencyOption = [],
+    currencyOptions = [],
     selectCurrency = "usd",
-    amtDisable = false,
+    amountDisable = false,
     currencyDisable = false,
-
     className = "",
 }) {
-    const amtInputId = useId()
+   const amountInputId = useId()
 
     return (
         <div className={`bg-white p-3 rounded-lg text-sm flex ${className}`}>
             <div className="w-1/2">
-                <label htmlFor={amtInputId} className="text-black/40 mb-2 inline-block">
+                <label htmlFor={amountInputId}  className="text-black/40 mb-2 inline-block">
                     {label}
                 </label>
                 <input
-
-                    id={amtInputId}
+                    id={amountInputId}
                     className="outline-none w-full bg-transparent py-1.5"
                     type="number"
                     placeholder="Amount"
-                    disabled={amtDisable}
+                    disabled={amountDisable}
                     value={amount}
-                    onChange={(e) => onAmtChange && onAmtChange(Number(e.target.value) //e.target.value convert val in string 
-                    )}
+                    onChange={(e) => onAmountChange && onAmountChange(Number(e.target.value))}
                 />
             </div>
             <div className="w-1/2 flex flex-wrap justify-end text-right">
@@ -43,20 +37,17 @@ function InputBox({
                     onChange={(e) => onCurrencyChange && onCurrencyChange(e.target.value)}
                     disabled={currencyDisable}
                 >
-
-                    {/* When you render a list using .map(), React needs a way to identify each item uniquely.
-                  The key helps React know */}'
-
-                    {currencyOption.map((currency) => (
-                        <option key={currency} value={currency}>
+                    
+                        {currencyOptions.map((currency) => (
+                            <option key={currency} value={currency}>
                             {currency}
-                        </option>
-                    ))}
-
+                            </option>
+                        ))}
+                
                 </select>
             </div>
         </div>
     );
 }
 
-export default InputBox
+export default InputBox;
