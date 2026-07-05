@@ -7,6 +7,7 @@ import Header from './components/Header/header.jsx'
 import Footer from './components/Footer/footer'
 import Home from './components/Home/home'
 import About from './components/About/about.jsx'
+import Contact from './components/Contact/contact.jsx'
 import './index.css'
 
 
@@ -22,6 +23,11 @@ const router = createBrowserRouter([
       {
         path:'about',
         element:<About></About>
+      },
+      {
+        path:'contact',
+        element:<Contact></Contact>
+
       }
     ]
 
