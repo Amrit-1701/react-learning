@@ -1,4 +1,7 @@
 import { useState } from 'react'
+import Header from './coponents/Header/header'
+import Footer from './coponents/Footer/footer'
+import Home from './coponents/Home/home'
 
 import './App.css'
 
@@ -8,10 +11,12 @@ function App() {
   return (
     <>
     
-<h1 className='bg-green-600 p-4 text-center'>React Router</h1>
-      
+    {/* <Header></Header> */}
+    <Footer></Footer>
+    <Home></Home>
+    
     </>
-  )
-}
+  
+)}
 
 export default App
