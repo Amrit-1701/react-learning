@@ -8,6 +8,7 @@ import Footer from './components/Footer/footer'
 import Home from './components/Home/home'
 import About from './components/About/about.jsx'
 import Contact from './components/Contact/contact.jsx'
+import User from './components/User/user.jsx'
 import './index.css'
 
 
@@ -40,6 +41,7 @@ const router = createBrowserRouter(
       <Route path='' element={<Home/>}></Route>
       <Route path='about' element={<About/>}></Route>
       <Route path='contact' element={<Contact/>}></Route>
+      <Route path='user/:userid' element={<User/>}></Route>
     </Route>
 
   )
