@@ -6,7 +6,7 @@ import Layout from './layout.jsx'
 import Header from './components/Header/header.jsx'
 import Footer from './components/Footer/footer'
 import Home from './components/Home/home'
-import About from './About/about.jsx'
+import About from './components/About/about.jsx'
 
 
 const router = createBrowserRouter([
