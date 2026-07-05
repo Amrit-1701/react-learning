@@ -7,6 +7,7 @@ import Header from './components/Header/header.jsx'
 import Footer from './components/Footer/footer'
 import Home from './components/Home/home'
 import About from './components/About/about.jsx'
+import './index.css'
 
 
 const router = createBrowserRouter([
