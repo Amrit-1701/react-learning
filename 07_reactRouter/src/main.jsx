@@ -3,9 +3,9 @@ import { createRoot } from 'react-dom/client'
 import {RouterProvider, createBrowserRouter} from 'react-router-dom'
 import App from './App.jsx'
 import Layout from './layout.jsx'
-import Header from './coponents/Header/header'
-import Footer from './coponents/Footer/footer'
-import Home from './coponents/Home/home'
+import Header from './components/Header/header.jsx'
+import Footer from './components/Footer/footer'
+import Home from './components/Home/home'
 import About from './About/about.jsx'
 
 
