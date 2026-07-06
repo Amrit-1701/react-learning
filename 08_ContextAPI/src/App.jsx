@@ -1,5 +1,6 @@
 import { useState } from 'react'
-
+import Login from './components/login'
+import Profile from './components/profile'
 import './App.css'
 import UserContextProvider from './context/UserContextProvider'
 
@@ -9,8 +10,8 @@ function App() {
   return (
     <UserContextProvider>
      <h1>Context API</h1>
-     <login></login>
-     <profile></profile>
+     <Login></Login>
+     <Profile></Profile>
     </UserContextProvider>
   )
 }
