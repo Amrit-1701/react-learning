@@ -9,6 +9,8 @@ function App() {
   return (
     <UserContextProvider>
      <h1>Context API</h1>
+     <login></login>
+     <profile></profile>
     </UserContextProvider>
   )
 }
