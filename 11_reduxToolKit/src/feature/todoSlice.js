@@ -33,4 +33,6 @@ export const todoSlice = createSlice({
 //addtodo always provide state(current state of recent initialSate) and action(provide passed data values ) 
 //Reducers are simply functions that change the state.
 
-export const {} =todoSlice.actions
+export const {addTodo , removeTodo} =todoSlice.actions
+
+export default todoSlice.reducer
