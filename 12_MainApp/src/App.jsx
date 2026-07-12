@@ -6,7 +6,8 @@ import React, { useEffect, useState } from 'react'
 import authService from './appwrite/1_auth'
 import './App.css'
 import { login, logout } from './store/authSlice'
-import { Header, Footer } from './components/index'
+import { Header } from './components/index'
+import { Footer } from './components/index'
 import { Outlet } from 'react-router-dom'
 
 function App() {
