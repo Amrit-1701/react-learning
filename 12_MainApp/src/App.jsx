@@ -6,8 +6,8 @@ import React, { useEffect, useState } from 'react'
 import authService from './appwrite/1_auth'
 import './App.css'
 import { login, logout } from './store/authSlice'
-import { Header , Footer } from './components/index'
-
+import { Header, Footer } from './components/index'
+import { Outlet } from 'react-router-dom'
 
 function App() {
 
@@ -17,21 +17,23 @@ function App() {
   useEffect(() => {
     authService.getCurrentUser().then((userData) => {
       if (userData) {
-        dispatch(login({userData}))
-      }else{
+        dispatch(login({ userData }))
+      } else {
         dispatch(logout())
       }
-    }).finally(()=>setLoading(false))
+    }).finally(() => setLoading(false))
   }, [])
 
   return !loading ? (
     <div className='min-h-sc flex flex-wrap bg-gray-400'><div className='w-full block'>
-      <Header/>
-  {ToDo  /* <Outlet/> */}
+      <Header />
+      <main>
+        ToDo:  {/*  <Outlet /> */}
+      </main>
       <Footer></Footer>
-      </div>
-      </div>
-  ):(null)
+    </div>
+    </div>
+  ) : (null)
 }
 
 export default App
