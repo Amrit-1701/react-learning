@@ -3,7 +3,7 @@
 
 import { useDispatch } from 'react-redux'
 import React, { useEffect, useState } from 'react'
-import authService from './appwrite/1_auth'
+import authService from './appwrite/authService'
 import './App.css'
 import { login, logout } from './store/authSlice'
 import { Header } from './components/index'
