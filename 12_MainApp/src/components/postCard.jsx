@@ -1,0 +1,18 @@
+import React from 'react'
+import appwriteService from '../appwrite/conf'
+import { Link } from 'react-router-dom'
+
+function PostCard({ $id, title, featuredImg }) {
+    return (
+        //link use to make card clickable
+        <Link to={`/post/${$id}`}>
+            <div className='w-full bg-gray-100 rounded-xl p-4'>
+                <div className='w-4 justify-center mb-4'>
+                    <img src={appwriteService.getFilePreview(featuredImg)} alt={title}></img>
+                </div>
+            </div>
+        </Link>
+    )
+}
+
+export default PostCard
