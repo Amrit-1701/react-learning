@@ -5,8 +5,7 @@ import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 
 function Header() {
-    const authService = useSelector((state) =>
-        state.auth.status)
+    const authStatus = useSelector((state) => state.auth.status);
     const navigate = useNavigate()
     //when we make navigation bar then we make an array and use loop on it
 
@@ -61,7 +60,7 @@ function Header() {
                         ))}
                         {authStatus && (
                             <li>
-                                <LogoutBtn/>
+                                <LogoutBtn />
                             </li>
                         )}
                     </ul>
