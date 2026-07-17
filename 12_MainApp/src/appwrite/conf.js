@@ -7,7 +7,7 @@ export class Service {
     bucket
     constructor() {
         this.client
-            .setEndpoint(config.appwwriteUrl)
+            .setEndpoint(config.appwriteUrl)
             .setProject(config.appwriteProjectId)
         this.databases = new Databases(this.client)
         this.bucket = new Storage(this.client)
@@ -77,7 +77,8 @@ export class Service {
     }
 
     //Query : only get whose status is active
-    async getPost(queries = [Query.equal('status', 'active')]) {
+    async getPost(
+        queries = [Query.equal('status', 'active')]) {
         try {
             return await this.databases.listDocuments(
                 config.appwriteDatabaseId,
